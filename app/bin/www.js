@@ -1,6 +1,8 @@
 import app from '../app.js';
 
-app.listen(3001, () => {
-    console.log("localhost:3001 으로 듣는 중");
+const PORT = 3001;
+
+app.listen(PORT, () => {
+    console.log(`localhost:${PORT} 으로 듣는 중`);
 });
 
