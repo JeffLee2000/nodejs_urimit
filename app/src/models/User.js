@@ -7,10 +7,10 @@ export class User {
 
     login() {
         const body = this.body;
-        const { id, psword, name } =  UserStorage.getUserInfo(body.id);
+        const { id, psword } =  UserStorage.getUserInfo(body.id);
 
         if (id) {
-            if (id === this.body.id && psword === this.body.psword) {
+            if (id === body.id && psword === body.psword) {
                 return { success: true };
             }
             return { success: false, msg: "비밀번호가 틀렸습니다." };

@@ -1,6 +1,6 @@
 const id = document.querySelector("#id");
 const psword = document.querySelector("#psword");
-const loginBtn = document.querySelector("button");
+const loginBtn = document.querySelector('button[type="submit"]');
 
 loginBtn.addEventListener("click", login);
 
@@ -23,6 +23,7 @@ function login() {
             location.href = "/";
         } else {
             alert(res.msg);
+            // location.href = "/login";
         }
     })
     .catch((err) => {
